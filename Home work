@@ -1,0 +1,93 @@
+#1
+n = int(input())
+A = []
+B = []
+for i in range(n):
+l = input()
+A.append(l)
+for i in range(n):
+if A[i] != 'k':
+B.append(int(A[i]))
+print(B)
+
+#2
+n = int(input())
+i = 1
+k = 1
+if n != 1:
+z = 2
+while i < n:
+i += k
+k = i - k
+z += 1
+if i == n:
+print(z)
+else:
+print('is not a Fibonacci number')
+else:
+print(1, 'or', 2)
+
+#3
+n = int(input())
+A = []
+for i in range(n):
+z = int(input())
+A.append(z)
+z = max(A) - min(A)
+k = min(A)
+for i in range(n):
+if max(A) - A[i] < z and max(A) - A[i] != 0:
+z = max(A) - A[i]
+k = A[i]
+print(k)
+
+#4
+n = int(input())
+A = []
+for i in range(n):
+A.append(int(input()))
+B = [1] * n
+for i in range(n):
+for j in range(i + 1, len(B)):
+if A[i] == A[j]:
+B[j], B[i] = 0, 0
+for i in range(n):
+if B[i] != 0:
+print(A[i])
+print(B)
+
+#5
+n = int(input())
+A = []
+for i in range(n):
+A.append(int(input()))
+for i in range(0, n - 1, 2):
+A[i], A[i+1] = A[i+1], A[i]
+print(A)
+
+#6
+n = int(input())
+A = []
+for i in range(n):
+A.append(int(input()))
+k = int(input())
+z = A[k]
+for i in range(k + 1, n):
+A[i-1] = A[i]
+A[n-1] = z
+A.pop()
+print(A)
+
+#7
+n = int(input())
+A = []
+for i in range(n):
+A.append(int(input()))
+k = int(input())
+C = int(input())
+z = A[n-1]
+for i in range(k+1, n):
+A[i] = A[i-1]
+A.append(z)
+A[k] = C
+print(A)

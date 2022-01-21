@@ -32,7 +32,7 @@ while i <= n:
 fib1 = 0
 fib2 = 1
 n = int(input("Номер элемента ряда Фибоначчи: "))
-for i in range(n - 2):
+for i in range(n - 1):
     fib_sum = fib1 + fib2
     fib1 = fib2
     fib2 = fib_sum
